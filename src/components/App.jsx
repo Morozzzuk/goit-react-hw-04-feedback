@@ -24,9 +24,7 @@ const App = () => {
   };
 
   const onLeaveFeedback = state => {
-    setState(prevState => ({
-      [state]: prevState[state] + 1,
-    }));
+    setState(prevState => ({ ...prevState, [state]: prevState[state] + 1 }));
   };
 
   const { good, neutral, bad } = state;
